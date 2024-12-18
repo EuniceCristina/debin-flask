@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="nav"><h1>Bem vindo ao nosso sistema!</h1> <h3>Faça seu login.</h3></div> <br> 
+    Não tem conta? <a href="{{url_for('register')}}">Registre-se</a> <br> <br>
+    <div class="formulario">
+        <form action="{{url_for('login')}}" method="post">
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Senha">
+            <button>Enviar</button>
+        </form> 
+    </div>
+    <p style="color: red;">{{texto}}</p>
+</body>
+</html>
